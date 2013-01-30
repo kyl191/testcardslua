@@ -23,27 +23,30 @@ backgrounds = {}
 -- Not too sure about the layout - it seems to calculate the height needed to show the text, then creates the box, not the other way around
 if dw > dh then
     question = director:createLabel( {
-        x = 0, y = dh - 16,
+        x = 5, y = dh - 5,
+        w = (dw*2/4) - 10,
         font = arial,
         } )
     for i=0,2,1 do
         labels[i+1] = director:createLabel( {
-            x=dw*2/4, y=(dh*(3-i)/3)-16,
+            x = dw*2/4, y = (dh*(3-i)/3)-16,
             font = arial,
         } )
         backgrounds[i+1] = director:createRectangle( {
-            x=dw*3/4, y=(dh*(5-2*i)/6), w = dw*2/4, h = (dh*1/3),
+            x = dw*3/4, y = (dh*(5-2*i)/6), w = dw*2/4, h = (dh*1/3),
         } )
     end
 else
     dbg.print("taller than wide")
     question = director:createLabel( {
-        x = 0, y = dh - 16,
+        x = 5, y = dh - 5,
+        w = (dw*2/4) - 10,
         font = arial,
     } )
     for i=0,2,1 do
         labels[i+1] = director:createLabel( {
-            x=dw*2/4, y=(dh*(3-i)/3)-16,
+            x = (dw*2/4)+5, y = (dh*(3-i)/3) - 5,
+            w = (dw*2/4) - 10,
             font = arial,
         } )
         backgrounds[i+1] = director:createRectangle( {
