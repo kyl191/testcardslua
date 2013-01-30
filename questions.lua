@@ -42,15 +42,12 @@ if dw > dh then
         } )
     backgrounds[1] = director:createLabel( {
         x=dw*3/4, y=(dh*5/6), w = dw*2/4, h = (dh*1/3),
-        name = "1.01"
         } )
     backgrounds[2] = director:createLabel( {
         x=dw*3/4, y=(dh*3/6), w = dw*2/4, h = (dh*1/3),
-        name = "1.02"
         } )
     backgrounds[3] = director:createLabel( {
         x=dw*3/4, y=(dh*1/6), w = dw*2/4, h = (dh*1/3),
-        name = "1.03"
         } )
 else
     dbg.print("taller than wide")
@@ -61,29 +58,23 @@ else
     labels[1] = director:createLabel( {
         x=dw*2/4, y=(dh*3/3)-16,
         font = arial,
-        name = "1"
         } )
     labels[2] = director:createLabel( {
         x=dw*2/4, y=(dh*2/3)-16,
         font = arial,
-        name = "2"
         } )
     labels[3] = director:createLabel( {
         x=dw*2/4, y=(dh*1/3)-16,
         font = arial,
-        name = "3"
         } )
     backgrounds[1] = director:createRectangle( {
         x=dw*3/4, y=(dh*5/6), w = dw*2/4, h = (dh*1/3),
-        name = "1.01"
         } )
     backgrounds[2] = director:createRectangle( {
         x=dw*3/4, y=(dh*3/6), w = dw*2/4, h = (dh*1/3),
-        name = "1.02"
         } )
     backgrounds[3] = director:createRectangle( {
         x=dw*3/4, y=(dh*1/6), w = dw*2/4, h = (dh*1/3),
-        name = "1.03"
         } )
 end
 
@@ -100,12 +91,14 @@ for i=1,3,1 do
     labels[i].vAlignment = "middle"
     labels[i].wrapWidth = dw*2/4
     labels[i].color = color.black
+    labels[i].name = string.format("%i", i)
 end
 
 -- Do stuff to the background rectangles
 for i=1,3,1 do
     backgrounds[i].color = color.green
     backgrounds[i].alpha = 0.5
+    backgrounds[i].name = "1.0" .. string.format("%i", i)
 end
 
 function questions.switchLabels()
