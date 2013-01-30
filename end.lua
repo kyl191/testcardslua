@@ -26,22 +26,15 @@ function scene:tearDown(event)
     obj1 = nil
 end
 
-function obj0:touch(event)
+function touch(event)
     if event.phase == "began" then
         director:setCurrentScene(nil)
         director:moveToScene(questionsScreen)
     end
 end
 
-function obj1:touch(event)
-    if event.phase == "began" then
-        director:setCurrentScene(nil)
-        director:moveToScene(questionsScreen)
-    end
-end
-
-obj0:addEventListener("touch", obj0)
-obj1:addEventListener("touch", obj1)
+obj0:addEventListener("touch", touch)
+obj1:addEventListener("touch", touch)
 
 scene:addEventListener( { "setUp", "tearDown" }, scene)
 
