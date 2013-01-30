@@ -30,23 +30,14 @@ if dw > dh then
     labels[1] = director:createLabel( {
         x=dw*2/4, y=(dh*3/3)-16,
         font = arial,
-        wrapWidth=dw*2/4,
-        hAlignment = "left", vAlignment = "middle",
-        color = color.black
         } )
     labels[2] = director:createLabel( {
         x=dw*2/4, y=(dh*2/3)-16,
         font = arial,
-        wrapWidth=dw*2/4,
-        hAlignment = "left", vAlignment = "middle",
-        color = color.black
         } )
     labels[3] = director:createLabel( {
         x=dw*2/4, y=(dh*1/3)-16,
         font = arial,
-        wrapWidth=dw*2/4,
-        hAlignment = "left", vAlignment = "middle",
-        color = color.black
         } )
     backgrounds[1] = director:createLabel( {
         x=dw*3/4, y=(dh*5/6), w = dw*2/4, h = (dh*1/3),
@@ -68,25 +59,16 @@ else
     labels[1] = director:createLabel( {
         x=dw*2/4, y=(dh*3/3)-16,
         font = arial,
-        wrapWidth=dw*2/4,
-        hAlignment = "left", vAlignment = "middle",
-        color = color.black,
         name = "1"
         } )
     labels[2] = director:createLabel( {
         x=dw*2/4, y=(dh*2/3)-16,
         font = arial,
-        wrapWidth=dw*2/4,
-        hAlignment = "left", vAlignment = "middle",
-        color = color.black, 
         name = "2"
         } )
     labels[3] = director:createLabel( {
         x=dw*2/4, y=(dh*1/3)-16,
         font = arial,
-        wrapWidth=dw*2/4,
-        hAlignment = "left", vAlignment = "middle",
-        color = color.black, 
         name = "3"
         } )
     backgrounds[1] = director:createRectangle( {
@@ -109,6 +91,14 @@ question.hAlignment = "middle"
 question.vAlignment = "middle"
 question.wrapWidth = dw*2/4
 question.color = color.black
+
+-- Do stuff to the labels
+for i=1,3,1 do
+    labels[i].hAlignment = "left"
+    labels[i].vAlignment = "middle"
+    labels[i].wrapWidth = dw*2/4
+    labels[i].color = color.black
+end
 
 -- Do stuff to the background rectangles
 for i=1,3,1 do
