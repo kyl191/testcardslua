@@ -90,7 +90,6 @@ for i=1,3,1 do
     labels[i].vAlignment = "middle"
     labels[i].wrapWidth = dw*2/4
     labels[i].color = color.black
-    labels[i].name = string.format("%i", i)
     labels[i].physics = nil
 end
 
@@ -98,7 +97,6 @@ end
 for i=1,3,1 do
     backgrounds[i].color = color.green
     backgrounds[i].alpha = 0.5
-    backgrounds[i].name = string.format("%i", i) .. ".0"
     backgrounds[i].zOrder = -1
     backgrounds[i].physics = nil
 end
@@ -137,13 +135,9 @@ end
 function touch(event)
     if event.phase == "began" then
         for i=1,3,1 do
-            if labels[i]:isPointInside(event.x, event.y) then
-                questions.validate(math.floor(tonumber(labels[i].name)))
-                dbg.print(tostring(labels[i]:isPointInside(event.x, event.y)), event.x, event.y)
-            elseif backgrounds[i]:isPointInside(event.x, event.y) then
-                dbg.print(tostring(backgrounds[i]:isPointInside(event.x, event.y)), event.x, event.y)
+            if labels[i]:isPointInside(event.x, event.y) or backgrounds[i]:isPointInside(event.x, event.y) then
                 dbg.print("Background " .. tostring(i) .. " says it owns " .. math.floor(tonumber(backgrounds[i].name)))
-                questions.validate(math.floor(tonumber(backgrounds[i].name)))
+                questions.validate(i)
             end
         end
     end
