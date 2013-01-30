@@ -137,7 +137,6 @@ function touch(event)
     if event.phase == "began" then
         for i=1,3,1 do
             if labels[i]:isPointInside(event.x, event.y) or backgrounds[i]:isPointInside(event.x, event.y) then
-                dbg.print("Background " .. tostring(i) .. " says it owns " .. math.floor(tonumber(backgrounds[i].name)))
                 questions.validate(i)
             end
         end
