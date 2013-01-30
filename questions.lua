@@ -10,7 +10,6 @@ file:close()
 -- Convert the string back to Lua table
 questions = json.decode(encoded)
 --dbg.printTable(questions) -- seriously, this works as expected already
-num = 1
 
 local background = director:createRectangle( {
     x=dw/2, y=dh/2, -- center in center of screen
@@ -102,6 +101,7 @@ for i=1,3,1 do
     backgrounds[i].physics = nil
 end
 
+num = 1
 function questions.switchLabels()
     if num == #questions then
         director:setCurrentScene(nil)
