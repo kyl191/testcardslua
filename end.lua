@@ -5,9 +5,9 @@ local dw = director.displayWidth
 local dh = director.displayHeight
 local arial = director:createFont("Arial32.fnt")
 local obj0 = director:createLabel( {
-        x=dw/2, y=dh/2,
+        x=10, y=dh/2,
         font = arial,
-        wrapWidth=dw*2/4,
+        w = dw - 20,
         hAlignment = "middle", vAlignment = "middle",
         color = color.black,
         text = "Congratulations on finishing. Tap anywhere to restart."
