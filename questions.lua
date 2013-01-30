@@ -98,7 +98,7 @@ end
 for i=1,3,1 do
     backgrounds[i].color = color.green
     backgrounds[i].alpha = 0.5
-    backgrounds[i].name = "1.0" .. string.format("%i", i)
+    backgrounds[i].name = string.format("%i", i) .. ".0"
     backgrounds[i].zOrder = -1
     backgrounds[i].physics = nil
 end
