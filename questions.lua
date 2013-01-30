@@ -91,13 +91,14 @@ for i=1,3,1 do
     labels[i].wrapWidth = dw*2/4
     labels[i].color = color.black
     labels[i].physics = nil
+    labels[i].zOrder = 2
 end
 
 -- Do stuff to the background rectangles
 for i=1,3,1 do
-    backgrounds[i].color = color.green
+    backgrounds[i].color = color.white
     backgrounds[i].alpha = 0.5
-    backgrounds[i].zOrder = -1
+    backgrounds[i].zOrder = 1
     backgrounds[i].physics = nil
 end
 
