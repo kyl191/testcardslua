@@ -26,6 +26,7 @@ backgrounds = {}
 if dw > dh then
     question = director:createLabel( {
         x = 0, y = dh - 16,
+        font = arial,
         } )
     labels[1] = director:createLabel( {
         x=dw*2/4, y=(dh*3/3)-16,
@@ -55,6 +56,7 @@ else
     dbg.print("taller than wide")
     question = director:createLabel( {
         x = 0, y = dh - 16,
+        font = arial,
         } )
     labels[1] = director:createLabel( {
         x=dw*2/4, y=(dh*3/3)-16,
