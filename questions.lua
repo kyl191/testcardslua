@@ -80,18 +80,18 @@ for i=1,3,1 do
     backgrounds[i].physics = nil
 end
 
-num = 1
+num = 0
 function questions.switchLabels()
     if num == #questions then
         director:setCurrentScene(nil)
         system:removeEventListener("touch", touch)
         director:moveToScene(endScreen)
     else
+        num = num + 1
         for i=1,3,1  do
             labels[i].text = questions[num]["label"..i]
         end
         question.text = questions[num]["question"]
-        num = num + 1
     end
 end
 
