@@ -26,10 +26,6 @@ backgrounds = {}
 if dw > dh then
     question = director:createLabel( {
         x = 0, y = dh - 16,
-        font = arial,
-        hAlignment = "left", vAlignment = "middle", 
-        wrapWidth=dw*2/4,
-        color=color.black
         } )
     labels[1] = director:createLabel( {
         x=dw*2/4, y=(dh*3/3)-16,
@@ -68,10 +64,6 @@ else
     dbg.print("taller than wide")
     question = director:createLabel( {
         x = 0, y = dh - 16,
-        font = arial, 
-        hAlignment = "left", vAlignment = "middle", 
-        wrapWidth=dw*2/4,
-        color=color.black
         } )
     labels[1] = director:createLabel( {
         x=dw*2/4, y=(dh*3/3)-16,
@@ -110,6 +102,13 @@ else
         name = "1.03"
         } )
 end
+
+-- Set options for the question label
+question.font = arial
+question.hAlignment = "middle"
+question.vAlignment = "middle"
+question.wrapWidth = dw*2/4
+question.color = color.black
 
 -- Do stuff to the background rectangles
 for i=1,3,1 do
