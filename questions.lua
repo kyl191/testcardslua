@@ -122,7 +122,7 @@ function questions.cleanAnswers()
 end
 
 function questions.validate(ans)
-    if ans == questions[num]["answer"] then
+    if ans == questions[num-1]["answer"] then
         questions.cleanAnswers()
         questions.switchLabels()
     else
