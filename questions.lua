@@ -53,8 +53,8 @@ else
 end
 
 -- Set options for the question label
-question.hAlignment = "middle"
-question.vAlignment = "middle"
+question.hAlignment = "left"
+question.vAlignment = "top"
 question.wrapWidth = dw*2/4
 question.color = color.black
 question.zOrder = 3
@@ -62,7 +62,7 @@ question.zOrder = 3
 -- Do stuff to the labels
 for i=1,3,1 do
     labels[i].hAlignment = "left"
-    labels[i].vAlignment = "middle"
+    labels[i].vAlignment = "top"
     labels[i].wrapWidth = dw*2/4
     labels[i].color = color.black
     labels[i].physics = nil
