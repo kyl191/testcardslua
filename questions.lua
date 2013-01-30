@@ -53,28 +53,15 @@ else
     question = director:createLabel( {
         x = 0, y = dh - 16,
         font = arial,
+    for i=0,2,1 do
+        labels[i+1] = director:createLabel( {
+            x=dw*2/4, y=(dh*(3-i)/3)-16,
+            font = arial,
         } )
-    labels[1] = director:createLabel( {
-        x=dw*2/4, y=(dh*3/3)-16,
-        font = arial,
+        backgrounds[i+1] = director:createRectangle( {
+            x=dw*3/4, y=(dh*(5-2*i)/6), w = dw*2/4, h = (dh*1/3),
         } )
-    labels[2] = director:createLabel( {
-        x=dw*2/4, y=(dh*2/3)-16,
-        font = arial,
-        } )
-    labels[3] = director:createLabel( {
-        x=dw*2/4, y=(dh*1/3)-16,
-        font = arial,
-        } )
-    backgrounds[1] = director:createRectangle( {
-        x=dw*3/4, y=(dh*5/6), w = dw*2/4, h = (dh*1/3),
-        } )
-    backgrounds[2] = director:createRectangle( {
-        x=dw*3/4, y=(dh*3/6), w = dw*2/4, h = (dh*1/3),
-        } )
-    backgrounds[3] = director:createRectangle( {
-        x=dw*3/4, y=(dh*1/6), w = dw*2/4, h = (dh*1/3),
-        } )
+    end
 end
 
 -- Set options for the question label
