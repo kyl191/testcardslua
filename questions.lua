@@ -37,7 +37,6 @@ if dw > dh then
         } )
     end
 else
-    dbg.print("taller than wide")
     question = director:createLabel( {
         x = 5, y = dh - 5,
         w = (dw*2/4) - 10,
