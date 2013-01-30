@@ -9,10 +9,9 @@ file:close()
 
 -- Convert the string back to Lua table
 questions = json.decode(encoded)
---dbg.printTable(questions) -- seriously, this works as expected already
 
 local background = director:createRectangle( {
-    x=dw/2, y=dh/2, -- center in center of screen
+    x=dw/2, y=dh/2, -- center in center of screen, seriously, displayed behaviour doesn't match the docs *at all*
     w=dw, h=dh,
     color=color.white
     } )
