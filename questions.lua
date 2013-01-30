@@ -137,4 +137,51 @@ function questions.validate(ans)
     end
 end
 
+-- Initially exhaustively do it, because I don't trust that looping this inside an array will work, since I bet i will only be evaluated when it's touched, and it'll fail
+function backgrounds[1]:touch(event)
+    if event.phase == "began" then
+        questions.validate(1)
+    end
+end
+
+function labels[1]:touch(event)
+    if event.phase == "began" then
+        questions.validate(1)
+    end
+end
+
+backgrounds[2]:addEventListener("touch", backgrounds[2])
+labels[2]:addEventListener("touch", labels[2])
+
+function backgrounds[2]:touch(event)
+    if event.phase == "began" then
+        questions.validate(2)
+    end
+end
+
+function labels[2]:touch(event)
+    if event.phase == "began" then
+        questions.validate(2)
+    end
+end
+
+backgrounds[2]:addEventListener("touch", backgrounds[2])
+labels[2]:addEventListener("touch", labels[2])
+
+function backgrounds[3]:touch(event)
+    if event.phase == "began" then
+        questions.validate(3)
+    end
+end
+
+function labels[3]:touch(event)
+    if event.phase == "began" then
+        questions.validate(3)
+    end
+end
+
+backgrounds[3]:addEventListener("touch", backgrounds[3])
+labels[3]:addEventListener("touch", labels[3])
+
+
 questions.switchLabels()
