@@ -28,8 +28,7 @@ end
 
 function touch(event)
     if event.phase == "began" then
-        director:setCurrentScene(nil)
-        director:moveToScene(questionsScreen)
+        system:sendEvent("tcdone", {to="q"})
     end
 end
 
