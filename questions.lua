@@ -145,40 +145,9 @@ function touch(event)
     end
 end
 
+for i=1,3,1  do
+    labels[i]:addEventListener("touch", touch)
+    backgrounds[i]:addEventListener("touch", touch)
 end
-
-backgrounds[2]:addEventListener("touch", backgrounds[2])
-labels[2]:addEventListener("touch", labels[2])
-
-function backgrounds[2]:touch(event)
-    if event.phase == "began" then
-        questions.validate(2)
-    end
-end
-
-function labels[2]:touch(event)
-    if event.phase == "began" then
-        questions.validate(2)
-    end
-end
-
-backgrounds[2]:addEventListener("touch", backgrounds[2])
-labels[2]:addEventListener("touch", labels[2])
-
-function backgrounds[3]:touch(event)
-    if event.phase == "began" then
-        questions.validate(3)
-    end
-end
-
-function labels[3]:touch(event)
-    if event.phase == "began" then
-        questions.validate(3)
-    end
-end
-
-backgrounds[3]:addEventListener("touch", backgrounds[3])
-labels[3]:addEventListener("touch", labels[3])
-
 
 questions.switchLabels()
