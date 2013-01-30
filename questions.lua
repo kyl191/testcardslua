@@ -69,6 +69,8 @@ else
     question = director:createLabel( {
         x = 0, y = dh - 16,
         font = arial, 
+        hAlignment = "left", vAlignment = "middle", 
+        wrapWidth=dw*2/4,
         color=color.black
         } )
     labels[1] = director:createLabel( {
