@@ -99,19 +99,21 @@ else
         } )
     backgrounds[1] = director:createRectangle( {
         x=dw*3/4, y=(dh*5/6), w = dw*2/4, h = (dh*1/3),
-        color = color.green, alpha = 0.5, 
         name = "1.01"
         } )
     backgrounds[2] = director:createRectangle( {
         x=dw*3/4, y=(dh*3/6), w = dw*2/4, h = (dh*1/3),
-        color = color.green, alpha = 0.5,
         name = "1.02"
         } )
     backgrounds[3] = director:createRectangle( {
         x=dw*3/4, y=(dh*1/6), w = dw*2/4, h = (dh*1/3),
-        color = color.green, alpha = 0.5,
         name = "1.03"
         } )
+end
+
+for i=1,3,1  do
+    backgrounds[i].color = color.green
+    backgrounds[i].alpha = 0.5
 end
 
 function questions.switchLabels()
