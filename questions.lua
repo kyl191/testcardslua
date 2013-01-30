@@ -78,33 +78,39 @@ else
         font = arial,
         wrapWidth=dw*2/4,
         hAlignment = "left", vAlignment = "middle",
-        color = color.black
+        color = color.black,
+        name = "1"
         } )
     labels[2] = director:createLabel( {
         x=dw*2/4, y=(dh*2/3)-16,
         font = arial,
         wrapWidth=dw*2/4,
         hAlignment = "left", vAlignment = "middle",
-        color = color.black
+        color = color.black, 
+        name = "2"
         } )
     labels[3] = director:createLabel( {
         x=dw*2/4, y=(dh*1/3)-16,
         font = arial,
         wrapWidth=dw*2/4,
         hAlignment = "left", vAlignment = "middle",
-        color = color.black
+        color = color.black, 
+        name = "3"
         } )
     backgrounds[1] = director:createRectangle( {
         x=dw*3/4, y=(dh*5/6), w = dw*2/4, h = (dh*1/3),
-        color = color.green, alpha = 0.5
+        color = color.green, alpha = 0.5, 
+        name = "1.01"
         } )
     backgrounds[2] = director:createRectangle( {
         x=dw*3/4, y=(dh*3/6), w = dw*2/4, h = (dh*1/3),
-        color = color.green, alpha = 0.5
+        color = color.green, alpha = 0.5,
+        name = "1.02"
         } )
     backgrounds[3] = director:createRectangle( {
         x=dw*3/4, y=(dh*1/6), w = dw*2/4, h = (dh*1/3),
-        color = color.green, alpha = 0.5
+        color = color.green, alpha = 0.5,
+        name = "1.03"
         } )
 end
 
