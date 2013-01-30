@@ -57,6 +57,7 @@ question.hAlignment = "middle"
 question.vAlignment = "middle"
 question.wrapWidth = dw*2/4
 question.color = color.black
+question.zOrder = 3
 
 -- Do stuff to the labels
 for i=1,3,1 do
