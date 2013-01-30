@@ -131,8 +131,6 @@ function questions.validate(ans)
     end
 end
 
-
--- Functional-ize it, using the node name. I hope self.name works...
 function touch(event)
     if event.phase == "began" then
         for i=1,3,1 do
@@ -142,7 +140,6 @@ function touch(event)
         end
     end
 end
-
 
 system:addEventListener("touch", touch)
 
