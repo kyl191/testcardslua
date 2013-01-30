@@ -61,18 +61,16 @@ question.wrapWidth = dw*2/4
 question.color = color.black
 question.zOrder = 3
 
--- Do stuff to the labels
 for i=1,3,1 do
+    -- Do stuff to the labels
     labels[i].hAlignment = "left"
     labels[i].vAlignment = "top"
     labels[i].wrapWidth = dw*2/4
     labels[i].color = color.black
     labels[i].physics = nil
     labels[i].zOrder = 2
-end
-
--- Do stuff to the background rectangles
-for i=1,3,1 do
+    
+    -- Do stuff to the background rectangles
     backgrounds[i].color = color.white
     backgrounds[i].alpha = 0.5
     backgrounds[i].zOrder = 1
