@@ -91,6 +91,7 @@ for i=1,3,1 do
     labels[i].wrapWidth = dw*2/4
     labels[i].color = color.black
     labels[i].name = string.format("%i", i)
+    labels[i].physics = nil
 end
 
 -- Do stuff to the background rectangles
@@ -99,6 +100,7 @@ for i=1,3,1 do
     backgrounds[i].alpha = 0.5
     backgrounds[i].name = "1.0" .. string.format("%i", i)
     backgrounds[i].zOrder = -1
+    backgrounds[i].physics = nil
 end
 
 function questions.switchLabels()
