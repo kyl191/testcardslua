@@ -127,4 +127,14 @@ function questions.cleanAnswers()
         end
         question.text = questions[num]["question"]
 end
+function questions.validate(ans)
+    if ans == questions[num]["answer"] then
+        questions.cleanAnswers()
+        questions.switchLabels()
+    else
+        backgrounds[ans].color = color.red
+        backgrounds[ans].alpha = 0.5
+    end
+end
+
 questions.switchLabels()
