@@ -98,6 +98,7 @@ for i=1,3,1 do
     backgrounds[i].color = color.green
     backgrounds[i].alpha = 0.5
     backgrounds[i].name = "1.0" .. string.format("%i", i)
+    backgrounds[i].zOrder = -1
 end
 
 function questions.switchLabels()
@@ -125,7 +126,6 @@ function questions.validate(ans)
         questions.switchLabels()
     else
         backgrounds[ans].color = color.red
-        backgrounds[ans].alpha = 0.5
     end
 end
 
