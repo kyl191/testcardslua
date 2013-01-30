@@ -92,18 +92,6 @@ else
         hAlignment = "left", vAlignment = "middle",
         color = color.black
         } )
-    backgrounds[1] = director:createLabel( {
-        x=dw*2/4, y=(dh*3/3)-16,
-        color = color.green
-        } )
-    backgrounds[2] = director:createLabel( {
-        x=dw*2/4, y=(dh*2/3)-16,
-        color = color.green
-        } )
-    backgrounds[3] = director:createLabel( {
-        x=dw*2/4, y=(dh*1/3)-16,
-        color = color.green
-        } )
 end
 
 function questions.switchLabels()
