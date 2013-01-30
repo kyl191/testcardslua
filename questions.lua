@@ -104,6 +104,7 @@ end
 function questions.switchLabels()
     if num == #questions then
         director:setCurrentScene(nil)
+        system:removeEventListener("touch", touch)
         director:moveToScene(endScreen)
     else
         for i=1,3,1  do
