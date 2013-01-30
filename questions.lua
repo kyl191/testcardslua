@@ -136,7 +136,6 @@ end
 -- Functional-ize it, using the node name. I hope self.name works...
 function touch(event)
     if event.phase == "began" then
-        questions.validate(math.floor(tonumber(system:getFocus().name)))
     end
 end
 
