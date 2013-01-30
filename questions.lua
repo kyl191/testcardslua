@@ -123,10 +123,10 @@ end
 
 function questions.cleanAnswers()
         for i=1,3,1  do
-            labels[i].text = questions[num]["label"..i]
+            backgrounds[i].color = color.white
         end
-        question.text = questions[num]["question"]
 end
+
 function questions.validate(ans)
     if ans == questions[num]["answer"] then
         questions.cleanAnswers()
@@ -136,6 +136,7 @@ function questions.validate(ans)
         backgrounds[ans].alpha = 0.5
     end
 end
+
 
 -- Initially exhaustively do it, because I don't trust that looping this inside an array will work, since I bet i will only be evaluated when it's touched, and it'll fail
 function backgrounds[1]:touch(event)
