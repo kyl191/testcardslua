@@ -92,6 +92,18 @@ else
         hAlignment = "left", vAlignment = "middle",
         color = color.black
         } )
+    backgrounds[1] = director:createRectangle( {
+        x=dw*3/4, y=(dh*5/6), w = dw*2/4, h = (dh*1/3),
+        color = color.green, alpha = 0.5
+        } )
+    backgrounds[2] = director:createRectangle( {
+        x=dw*3/4, y=(dh*3/6), w = dw*2/4, h = (dh*1/3),
+        color = color.green, alpha = 0.5
+        } )
+    backgrounds[3] = director:createRectangle( {
+        x=dw*3/4, y=(dh*1/6), w = dw*2/4, h = (dh*1/3),
+        color = color.green, alpha = 0.5
+        } )
 end
 
 function questions.switchLabels()
