@@ -138,17 +138,13 @@ function questions.validate(ans)
 end
 
 
--- Initially exhaustively do it, because I don't trust that looping this inside an array will work, since I bet i will only be evaluated when it's touched, and it'll fail
-function backgrounds[1]:touch(event)
+-- Functional-ize it, using the node name. I hope self.name works...
+function touch(event)
     if event.phase == "began" then
-        questions.validate(1)
+        questions.validate(math.floor(tonumber(system:getFocus().name)))
     end
 end
 
-function labels[1]:touch(event)
-    if event.phase == "began" then
-        questions.validate(1)
-    end
 end
 
 backgrounds[2]:addEventListener("touch", backgrounds[2])
