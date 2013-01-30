@@ -111,7 +111,8 @@ else
         } )
 end
 
-for i=1,3,1  do
+-- Do stuff to the background rectangles
+for i=1,3,1 do
     backgrounds[i].color = color.green
     backgrounds[i].alpha = 0.5
 end
