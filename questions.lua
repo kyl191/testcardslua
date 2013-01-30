@@ -79,7 +79,6 @@ else
 end
 
 -- Set options for the question label
-question.font = arial
 question.hAlignment = "middle"
 question.vAlignment = "middle"
 question.wrapWidth = dw*2/4
