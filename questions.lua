@@ -137,9 +137,11 @@ function touch(event)
     end
 end
 
-for i=1,3,1  do
-    labels[i]:addEventListener("touch", touch)
-    backgrounds[i]:addEventListener("touch", touch)
-end
+-- for i=1,3,1  do
+    -- labels[i]:addEventListener("touch", touch)
+    -- backgrounds[i]:addEventListener("touch", touch)
+-- end
+
+system:addEventListener("touch", touch)
 
 questions.switchLabels()
