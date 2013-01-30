@@ -136,6 +136,16 @@ end
 -- Functional-ize it, using the node name. I hope self.name works...
 function touch(event)
     if event.phase == "began" then
+        for i=1,3,1 do
+            if labels[i]:isPointInside(event.x, event.y) then
+                questions.validate(math.floor(tonumber(labels[i].name)))
+                dbg.print(tostring(labels[i]:isPointInside(event.x, event.y)), event.x, event.y)
+            elseif backgrounds[i]:isPointInside(event.x, event.y) then
+                dbg.print(tostring(backgrounds[i]:isPointInside(event.x, event.y)), event.x, event.y)
+                dbg.print("Background " .. tostring(i) .. " says it owns " .. math.floor(tonumber(backgrounds[i].name)))
+                questions.validate(math.floor(tonumber(backgrounds[i].name)))
+            end
+        end
     end
 end
 
