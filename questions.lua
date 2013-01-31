@@ -47,7 +47,6 @@ else
         w = dw - 30, h = (dh*1/4) - 10,
         yAnchor = 1,
         font = arial,
-        hAlignment = "center",
     } )
     for i=0,2,1 do
         labels[i+1] = director:createLabel( {
@@ -55,6 +54,7 @@ else
             w = dw - 30, h = (dh*1/4) - 10,
             font = arial,
             yAnchor = 1,
+            hAlignment = "center",
         } )
         backgrounds[i+1] = director:createRectangle( {
             x=dw*1/2, y=(dh*(6-2*i)/8),
