@@ -84,12 +84,11 @@ for i=1,3,1 do
     backgrounds[i].physics = nil
 end
 
-function scene:setUp(event)
-    num = 0
-end
+num = 0
 
 function questions.switchLabels()
     if num == #questions then
+        num = 0
         system:removeEventListener("touch", touch)
         system:sendEvent("tcdone", {to="e"})
     else
