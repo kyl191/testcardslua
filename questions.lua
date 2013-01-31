@@ -32,6 +32,7 @@ if dw > dh then
             x = dw*2/4, y = (dh*(3-i)/3) - 16,
             w = dw * 1/2, h = (dh*1/3) - 16,
             font = arial,
+            hAlignment = "left",
         } )
         backgrounds[i+1] = director:createRectangle( {
             x = dw*3/4, y = (dh*(5-2*i)/6), w = dw*2/4, h = (dh*1/3),
@@ -43,6 +44,7 @@ else
         w = dw - 30, h = (dh*1/4) - 10,
         yAnchor = 1,
         font = arial,
+        hAlignment = "center",
     } )
     for i=0,2,1 do
         labels[i+1] = director:createLabel( {
@@ -66,7 +68,6 @@ question.zOrder = 3
 
 for i=1,3,1 do
     -- Do stuff to the labels
-    labels[i].hAlignment = "left"
     labels[i].vAlignment = "top"
     labels[i].color = color.black
     labels[i].physics = nil
