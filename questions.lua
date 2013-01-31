@@ -36,7 +36,8 @@ if dw > dh then
             hAlignment = "left",
         } )
         backgrounds[i+1] = director:createRectangle( {
-            x = dw*3/4, y = (dh*(5-2*i)/6), w = dw*2/4, h = (dh*1/3),
+            x = dw*3/4, y = (dh*(5-2*i)/6),
+            w = dw*2/4, h = (dh*1/3),
         } )
     end
 else
@@ -56,7 +57,8 @@ else
             yAnchor = 1,
         } )
         backgrounds[i+1] = director:createRectangle( {
-            x=dw*3/4, y=(dh*(5-2*i)/6), w = dw*2/4, h = (dh*1/3),
+            x=dw*1/2, y=(dh*(6-2*i)/8),
+            w = dw, h = (dh*1/4),
             yAnchor = 1,
         } )
     end
