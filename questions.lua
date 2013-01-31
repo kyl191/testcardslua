@@ -22,6 +22,7 @@ labels = {}
 backgrounds = {}
 -- Not too sure about the layout - it seems to calculate the height needed to show the text, then creates the box, not the other way around
 if dw > dh then
+    -- landscape mode, show question on left, and answers on right
     question = director:createLabel( {
         x = 5, y = dh - 5,
         w = (dw*2/4) - 10, h = dh - 10,
@@ -39,6 +40,7 @@ if dw > dh then
         } )
     end
 else
+    -- portrait mode, show question above and answers below
     question = director:createLabel( {
         x = 15, y = dh - 5,
         w = dw - 30, h = (dh*1/4) - 10,
