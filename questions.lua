@@ -41,6 +41,7 @@ else
     question = director:createLabel( {
         x = 15, y = dh - 5,
         w = dw - 30, h = (dh*1/4) - 10,
+        yAnchor = 1,
         font = arial,
     } )
     for i=0,2,1 do
@@ -48,9 +49,11 @@ else
             x = 15, y = (dh*(3-i)/4) - 5,
             w = dw - 30, h = (dh*1/4) - 10,
             font = arial,
+            yAnchor = 1,
         } )
         backgrounds[i+1] = director:createRectangle( {
             x=dw*3/4, y=(dh*(5-2*i)/6), w = dw*2/4, h = (dh*1/3),
+            yAnchor = 1,
         } )
     end
 end
