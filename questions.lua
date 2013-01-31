@@ -89,6 +89,7 @@ num = 0
 function questions.switchLabels()
     if num == #questions then
         num = 0
+        questions.switchLabels()
         system:removeEventListener("touch", touch)
         system:sendEvent("tcdone", {to="e"})
     else
