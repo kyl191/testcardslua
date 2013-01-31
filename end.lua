@@ -7,7 +7,8 @@ local arial = director:createFont("Arial32.fnt")
 local obj0 = director:createLabel( {
         x=10, y=dh/2,
         font = arial,
-        w = dw - 20,
+        w = dw - 20, h = dh - 20,
+        yAnchor = 1,
         hAlignment = "middle", vAlignment = "middle",
         color = color.black,
         text = "Congratulations on finishing. Tap anywhere to restart."
