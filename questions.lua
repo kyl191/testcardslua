@@ -84,7 +84,10 @@ for i=1,3,1 do
     backgrounds[i].physics = nil
 end
 
-num = 0
+function scene:setUp(event)
+    num = 0
+end
+
 function questions.switchLabels()
     if num == #questions then
         system:removeEventListener("touch", touch)
