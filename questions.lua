@@ -27,7 +27,7 @@ if dw > dh then
         x = 5, y = dh - 5,
         w = (dw*2/4) - 10, h = dh - 10,
         font = arial,
-        } )
+    } )
     for i=0,2,1 do
         labels[i+1] = director:createLabel( {
             x = dw*2/4, y = (dh*(3-i)/3) - 16,
