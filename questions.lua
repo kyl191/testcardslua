@@ -24,12 +24,13 @@ backgrounds = {}
 if dw > dh then
     question = director:createLabel( {
         x = 5, y = dh - 5,
-        w = (dw*2/4) - 10,
+        w = (dw*2/4) - 10, h = dh - 10,
         font = arial,
         } )
     for i=0,2,1 do
         labels[i+1] = director:createLabel( {
-            x = dw*2/4, y = (dh*(3-i)/3)-16,
+            x = dw*2/4, y = (dh*(3-i)/3) - 16,
+            w = dw * 1/2, h = (dh*1/3) - 16,
             font = arial,
         } )
         backgrounds[i+1] = director:createRectangle( {
@@ -38,14 +39,14 @@ if dw > dh then
     end
 else
     question = director:createLabel( {
-        x = 5, y = dh - 5,
-        w = (dw*2/4) - 10,
+        x = 15, y = dh - 5,
+        w = dw - 30, h = (dh*1/4) - 10,
         font = arial,
     } )
     for i=0,2,1 do
         labels[i+1] = director:createLabel( {
-            x = (dw*2/4)+5, y = (dh*(3-i)/3) - 5,
-            w = (dw*2/4) - 10,
+            x = 15, y = (dh*(3-i)/4) - 5,
+            w = dw - 30, h = (dh*1/4) - 10,
             font = arial,
         } )
         backgrounds[i+1] = director:createRectangle( {
@@ -57,7 +58,6 @@ end
 -- Set options for the question label
 question.hAlignment = "left"
 question.vAlignment = "top"
-question.wrapWidth = dw*2/4
 question.color = color.black
 question.zOrder = 3
 
@@ -65,7 +65,6 @@ for i=1,3,1 do
     -- Do stuff to the labels
     labels[i].hAlignment = "left"
     labels[i].vAlignment = "top"
-    labels[i].wrapWidth = dw*2/4
     labels[i].color = color.black
     labels[i].physics = nil
     labels[i].zOrder = 2
