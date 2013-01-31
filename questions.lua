@@ -45,7 +45,6 @@ else
     question = director:createLabel( {
         x = 15, y = dh - 5,
         w = dw - 30, h = (dh*1/4) - 10,
-        yAnchor = 1,
         font = arial,
     } )
     for i=0,2,1 do
@@ -53,13 +52,11 @@ else
             x = 15, y = (dh*(3-i)/4) - 5,
             w = dw - 30, h = (dh*1/4) - 10,
             font = arial,
-            yAnchor = 1,
             hAlignment = "center",
         } )
         backgrounds[i+1] = director:createRectangle( {
             x=dw*1/2, y=(dh*(3-i)/4),
             w = dw, h = (dh*1/4),
-            yAnchor = 1,
         } )
     end
 end
@@ -69,6 +66,7 @@ question.hAlignment = "left"
 question.vAlignment = "top"
 question.color = color.black
 question.zOrder = 3
+question.yAnchor = 1
 
 for i=1,3,1 do
     -- Do stuff to the labels
@@ -76,12 +74,14 @@ for i=1,3,1 do
     labels[i].color = color.black
     labels[i].physics = nil
     labels[i].zOrder = 2
+    labels[i].yAnchor = 1
     
     -- Do stuff to the background rectangles
     backgrounds[i].color = color.white
     backgrounds[i].alpha = 0.5
     backgrounds[i].zOrder = 1
     backgrounds[i].physics = nil
+    backgrounds[i].yAnchor = 1
 end
 
 num = 0
